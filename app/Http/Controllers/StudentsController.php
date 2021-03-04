@@ -19,6 +19,12 @@ class StudentsController extends Controller
         return view('students/index', ['students' => $students]);
     }
 
+    public function getData()
+    {
+        $students = \App\Models\Student::all();
+        return $students;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
